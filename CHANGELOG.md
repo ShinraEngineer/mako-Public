@@ -1,5 +1,13 @@
 # Mako changelog
 
+## Mako Update 6: Library accuracy and clearer errors
+
+Mako Update 6: Library accuracy and clearer errors.
+
+- The bundled BGE Small embedding model now shows as Installed in the Library instead of offering a download.
+- The empty model picker says what to do: "No chat model yet. Library opens the downloads."
+- If Mako ever hits an unexpected error, the dialog now names the exception and where it came from, so it can be fixed from a screenshot. Full details are in Mako-Data\logs (Settings > Export logs).
+
 ## Mako Update 5: clean exit and a better update prompt
 
 Mako Update 5 fixes the error dialog on exit and tidies the update flow.
