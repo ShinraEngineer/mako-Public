@@ -1,5 +1,13 @@
 # Mako changelog
 
+## Mako Update 5: clean exit and a better update prompt
+
+Mako Update 5 fixes the error dialog on exit and tidies the update flow.
+
+- Fixed: "The CancellationTokenSource has been disposed" appearing when Mako closed or restarted after an update. Services were being shut down twice on the way out.
+- The sidebar button now reads "Update Ready: Mako Update N" and fits; the full title is its tooltip.
+- The update prompt is a proper dialog: title, the first lines of the release notes, a link to the full notes on GitHub, and Install and restart / Not now.
+
 ## Mako Update 4: runtime and embedding model built in
 
 Mako Update 4 makes a bare Mako.exe self-sufficient for chat.
