@@ -1,5 +1,11 @@
 # Mako changelog
 
+## Mako Update 8: every model in the picker
+
+Mako Update 8: every model in the picker.
+
+- The model dropdown now lists every .gguf in the kit, including the bundled BGE Small embedding model. BGE is shown greyed with a note that it ranks knowledge and memory rather than chatting, so it cannot be picked by mistake.
+
 ## Mako Update 7: finds your models wherever they are
 
 Mako Update 7: finds your models wherever they ended up.
