@@ -1,5 +1,13 @@
 # Mako changelog
 
+## Mako Update 3: one Mako-Data folder
+
+Mako Update 3 puts everything in one place.
+
+- Next to Mako.exe there is now a single Mako-Data folder holding the whole kit: data (settings, conversations, Mako-Mem), logs, bin, models, knowledge and tools. Nothing else is created beside the exe.
+- Kits from Update 1 and 2 (folders beside the exe) are moved into this shape automatically on the first start; your settings, conversations and memory come along.
+- The Logs folder is now Mako-Data\logs; the app's own files sit in Mako-Data\data.
+
 ## Mako Update 2: converter vendors in the Library
 
 Mako Update 2 completes the "just the exe" story: every part of the kit can now be downloaded from inside the app.
