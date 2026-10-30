@@ -1,5 +1,13 @@
 # Mako changelog
 
+## Mako Update 9: chat works out of the box
+
+Mako Update 9: chat works out of the box.
+
+- The Qwen2.5 1.5B chat model now ships inside Mako.exe alongside the CPU runtime and the BGE embedding model. A bare Mako.exe chats with no network at all; all three are written into Mako-Data on any start where they are missing.
+- Phi-3.5 mini (2.3 GB, the better default) is above GitHub's release size cap, so on a kit without it Mako fetches it in the background on first run and switches to it when it lands. A Settings switch turns that off; the Library row can cancel it.
+- The exe is about 1.2 GB as a result, so this update and later ones are larger downloads.
+
 ## Mako Update 8: every model in the picker
 
 Mako Update 8: every model in the picker.
