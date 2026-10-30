@@ -1,5 +1,14 @@
 # Mako changelog
 
+## Mako Update 10: Tools fixes
+
+Mako Update 10: Tools fixes.
+
+- IT-Tools loads again. Both tool suites are now served by a small built-in loopback server instead of the browser's virtual-host mapping, which failed with ERR_ACCESS_DENIED on some PCs.
+- Fully offline: every request a tool page makes to any other host (scripts, fonts, analytics, links) is refused locally and logged. Nothing leaves the machine.
+- The Convert tab lists every action the Shinra Conversion Tool offers (35 across Image, Document, Video, Animated, Audio and ISO) at all times. Actions whose vendors are not downloaded yet are marked in red and explain what to fetch; downloading the vendors from Library > Tools lights them up without a restart.
+- Tooltips are readable: dark background, light text.
+
 ## Mako Update 9: chat works out of the box
 
 Mako Update 9: chat works out of the box.
