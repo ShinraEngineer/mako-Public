@@ -11,3 +11,4 @@ First public release of Mako, the portable offline AI desktop app.
 - Tools: CyberChef, IT-Tools and the Convert tab (images, video, GIF, audio, PDF, ISO).
 - Encrypted per-component logs with export from Settings.
 - In-app updates from this repository: hash- and signature-checked before install.
+
