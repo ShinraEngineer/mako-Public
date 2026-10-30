@@ -1,5 +1,20 @@
 # Mako changelog
 
+## Mako Update 11: Model fit colours and chat compaction
+
+**Models tell you what they are for and how they will run on this PC.**
+
+- Catalog names now read `Model #B (what it is for)`, for example *Qwen2.5 1.5B Instruct (Fast General Chat and Summarizations)*, *Meta Llama 3.1 8B Instruct (Reliable Long-Form Writing)*, *Qwen2.5 Coder 7B Instruct (Code-Specialized Model)*. Each description says when to pick it, with examples (a tabletop RPG session, a novel chapter, a Python or Bash script, a math proof, a long contract).
+- Every model row carries colour-coded chips: download size, quantization, licence (green permissive, amber community terms, orange research-only) and hardware fit. Hover a chip for the numbers.
+- Hardware fit is a six-step scale from bright green (runs perfectly with the current settings) through amber and orange to crimson (will crawl), plus grey for a model this PC cannot hold at all. It is computed from this PC's RAM, a measured memory speed, the GPU and its VRAM, the Hardware Acceleration switch and the context size, so changing Settings recolours the list. Labels: *Fits on the GPU*, *Runs on CPU*, *Runs on CPU (GPU Capable)*, *Runs on CPU (Does Not Fit on GPU)*, *Cannot run here*.
+- The fit is recomputed on every start, so the same portable folder plugged into a weaker PC shows the truth for that PC. A downloaded model that cannot run there is greyed out in the picker with a tooltip explaining why, is not offered for download, and if it was the active model Mako loads the best model it can run instead and says so in the status line.
+
+**Chat compaction.**
+
+- When a chat slows down (the reply takes three times longer to start than it used to, writes at half the speed, no longer fits the context window, or passes 40 messages), a banner above the input offers *Compact chat*. Compacting folds the older messages into a short structured summary and keeps the last six verbatim; the folded messages stay in the chat file and nothing is deleted. The model then re-reads far less on every turn.
+- Settings has a new *Chats* section: pick any chat and *Compact this chat*, or *Compact all chats*.
+
+
 ## Mako Update 10: Tools fixes
 
 Mako Update 10: Tools fixes.
