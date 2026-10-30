@@ -1,5 +1,13 @@
 # Mako changelog
 
+## Mako Update 7: finds your models wherever they are
+
+Mako Update 7: finds your models wherever they ended up.
+
+- The model picker now lists every .gguf under Mako-Data\models: in a tier folder, in a folder of its own, or dropped straight into models.
+- A kit arranged by hand, with bin, models, knowledge, tools or Logs still sitting beside Mako.exe, is folded into Mako-Data on start instead of being ignored.
+- The Library's Models tab names the folder Mako scans when no chat model is found.
+
 ## Mako Update 6: Library accuracy and clearer errors
 
 Mako Update 6: Library accuracy and clearer errors.
