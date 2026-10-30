@@ -1,5 +1,12 @@
 # Mako changelog
 
+## Mako Update 4: runtime and embedding model built in
+
+Mako Update 4 makes a bare Mako.exe self-sufficient for chat.
+
+- The CPU model runtime (llamafile 0.10.6) and the BGE Small embedding model now ship inside Mako.exe. On any start where they are missing from Mako-Data, Mako writes them back, hash-checked. No download is needed for either; the only thing to fetch is a chat model.
+- The exe grows to about 126 MB as a result. Updates are still a single file.
+
 ## Mako Update 3: one Mako-Data folder
 
 Mako Update 3 puts everything in one place.
