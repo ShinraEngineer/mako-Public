@@ -1,5 +1,18 @@
 # Mako changelog
 
+## Mako Update 12: Context menu, GPU choice and models by URL
+
+**Context size is now a menu, and it knows the model's limits.**
+
+- Settings offers 2,048 / 4,096 / 8,192 / 16,384 / 32,768 tokens (64k and 128k too when the model allows), each labelled with the memory that window costs for the active model. *Custom...* swaps in a text box: type any size with at least four digits. A value above the model's trained window, or one that needs more memory than this PC has, is refused with a note and the menu comes back unchanged. Enter or clicking away commits, Escape cancels.
+- Hover the setting for the full explanation of what context size does and how it differs on the CPU (RAM, slow to read a full window) and the GPU (video memory, can push the model off the card, fast to read).
+- Mako now reads each model file's trained context window from its header. Sizes above it are greyed out, and the server is never started above it, so Gemma 2 (8k) and Phi-4 (16k) cannot be pushed into repetition by a big setting.
+
+**Pick which GPU.** A PC with two or more dedicated cards gets a *GPU to use* menu in Settings. The model is loaded onto that card only, instead of the runtime spreading it across all of them, and the Library colours follow the chosen card's memory.
+
+**Any model by URL.** The bottom of Library > Models takes a direct link to a `.gguf` file (a Hugging Face "resolve" link, for example). Mako checks the file exists, downloads it into `models\custom`, and then rates it for this PC like every other model. Gated models, web pages and non-GGUF links are refused with a clear message.
+
+
 ## Mako Update 11: Model fit colours and chat compaction
 
 **Models tell you what they are for and how they will run on this PC.**

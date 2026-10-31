@@ -32,7 +32,11 @@ inside your PC.*
   folder on a laptop and on a desktop tells the truth for each.
 - **GPU acceleration, optional.** One switch in Settings moves the model onto an
   NVIDIA card (CUDA) or any other modern GPU (Vulkan). CPU-only always works and
-  is the default.
+  is the default. A PC with two or more cards gets a menu to pick which one.
+- **Any model by URL.** Paste a direct link to a `.gguf` file at the bottom of
+  the Library and Mako fetches it, then rates it for your PC like the rest.
+  The context-size menu shows what each window costs in memory and greys out
+  sizes the model was never trained for.
 - **Offline knowledge.** Install Wikipedia or other Kiwix packs from the
   Library and Mako searches them for every question and cites the passages it
   used. Simple English Wikipedia is about 1 GB; the full English text-only
