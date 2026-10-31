@@ -10,6 +10,12 @@ Mako is Windows-only (Windows 10 or 11, 64-bit). It is signed by Shinra CC.
 
 [**Download the latest Mako.exe**](https://github.com/ShinraEngineer/mako-Public/releases/latest)
 
+![Mako answering a coding question, fully offline](docs/mako.png)
+
+*The name is a Final Fantasy VII reference: Mako is the energy Shinra draws from
+the planet to power everything it builds. This Mako runs on the power already
+inside your PC.*
+
 ---
 
 ## What you get
@@ -89,10 +95,11 @@ numbers behind the rating and what to change.
 
 - Chat, memory, knowledge search and the tools all run on your machine. There
   is no telemetry and no account.
-- Mako only talks to the internet in two cases: downloads you start from the
-  Library (plus the one-time Phi-3.5 fetch, which you can turn off), and a
-  check of this repository's latest release for updates. Offline, both are
-  silent.
+- Mako only talks to the internet in three cases: downloads you start from the
+  Library (plus the one-time Phi-3.5 fetch, which you can turn off), a check
+  of this repository's latest release for updates, and the Kiwix pack catalog
+  when you open Library > Knowledge, so it can list the packs available.
+  Offline, all three fail silently and nothing else changes.
 - Mako-Mem is sealed with AES-256-GCM under a key derived from your passphrase.
   The passphrase is never stored, so a copied folder carries ciphertext only.
 - Logs are encrypted per machine. Settings > **Export logs** writes plain
