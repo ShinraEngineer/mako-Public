@@ -1,5 +1,17 @@
 # Mako changelog
 
+## Mako 1.4.0: semantic versioning + launcher-managed install
+<!-- mako v1.4.0 -->
+
+Mako now installs and updates through the ShinraSuite launcher.
+
+- Versioning moves from whole numbers to semantic versioning; this release is **1.4.0**.
+- When Mako is installed under Program Files (`C:\Program Files\ShinraCC\Apps\Mako`, managed by the launcher), its data â€” settings, the encrypted Mako-Mem vault, downloaded models and logs â€” lives in `%LocalAppData%\ShinraCC\Mako`. Run it portably and it still keeps everything in a `Mako-Data` folder beside the exe, exactly as before; an existing portable kit is migrated automatically on first run, and the DPAPI vault keeps decrypting for the same Windows user.
+- When the launcher manages Mako, updates are delivered by the launcher (no in-place self-update under Program Files).
+
+Signed with the Shinra CC certificate.
+
+
 ## Mako Update 12: Context menu, GPU choice and models by URL
 
 **Context size is now a menu, and it knows the model's limits.**
