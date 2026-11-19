@@ -1,5 +1,18 @@
 # Mako changelog
 
+## Mako 1.4.5: self-aware help, faster replies, survival tools, and interface scaling
+<!-- mako v1.4.5 -->
+
+Features and fixes.
+
+- Mako now answers questions about its own features (Library, Tools, Knowledge, Settings) instead of saying it has no information, and can work common survival and off-grid calculations in chat.
+- Replies no longer slow down turn after turn in a long conversation. The model's prompt cache is reused, and the background memory pass now waits for a pause instead of clearing the cache between turns.
+- New "Survival & Off-grid Calculators" tool in the Tools window: soap/lye saponification, solar and battery sizing, water need and purification, rainwater capture, generator fuel, and a field reference.
+- New Survival & Off-grid knowledge packs in the Library: post-disaster library, Appropedia, Energypedia, iFixit, WikiMed, and Canadian Prepper.
+- New Interface scale control in Settings (80% to 200%) on top of automatic per-monitor DPI, so text stays readable from a small laptop screen up to a 4K display.
+
+Signed with the Shinra CC certificate.
+
 ## Mako 1.4.4: download retries and GPU-runtime detection fix
 <!-- mako v1.4.4 -->
 
@@ -33,7 +46,7 @@ Mako 1.4.2: updates now close and reopen Mako cleanly
 Mako now installs and updates through the ShinraSuite launcher.
 
 - Versioning moves from whole numbers to semantic versioning; this release is **1.4.0**.
-- When Mako is installed under Program Files (`C:\Program Files\ShinraCC\Apps\Mako`, managed by the launcher), its data ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â settings, the encrypted Mako-Mem vault, downloaded models and logs ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â lives in `%LocalAppData%\ShinraCC\Mako`. Run it portably and it still keeps everything in a `Mako-Data` folder beside the exe, exactly as before; an existing portable kit is migrated automatically on first run, and the DPAPI vault keeps decrypting for the same Windows user.
+- When Mako is installed under Program Files (`C:\Program Files\ShinraCC\Apps\Mako`, managed by the launcher), its data ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â settings, the encrypted Mako-Mem vault, downloaded models and logs ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â lives in `%LocalAppData%\ShinraCC\Mako`. Run it portably and it still keeps everything in a `Mako-Data` folder beside the exe, exactly as before; an existing portable kit is migrated automatically on first run, and the DPAPI vault keeps decrypting for the same Windows user.
 - When the launcher manages Mako, updates are delivered by the launcher (no in-place self-update under Program Files).
 
 Signed with the Shinra CC certificate.
