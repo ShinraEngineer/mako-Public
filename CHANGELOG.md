@@ -1,5 +1,17 @@
 # Mako changelog
 
+## Mako 1.4.3: reliable updates, honest model loading, and new models
+<!-- mako v1.4.3 -->
+
+Fixes and new models.
+
+- Updates now install and reopen reliably. The 1.4.2 updater could not apply any update at all (it failed reading the release manifest); that is fixed, and after an update Mako now waits for the old copy to close and reliably reopens.
+- Clearer model loading. When a model will not fit your GPU's memory, Mako now loads it on the CPU and tells you why (for example a large context needs more VRAM than the card has), instead of a silent "did not come up in time".
+- Five new downloadable models in the Library: Qwythos 9B, DeepSeek Coder V2 Lite abliterated, Qwen2.5 Coder 14B, GLM-4 9B, and Qwen2.5 14B abliterated.
+- Right-click a message to copy it.
+
+Signed with the Shinra CC certificate.
+
 ## Mako 1.4.2: updates now close and reopen Mako cleanly
 <!-- mako v1.4.2 -->
 
@@ -11,7 +23,7 @@ Mako 1.4.2: updates now close and reopen Mako cleanly
 Mako now installs and updates through the ShinraSuite launcher.
 
 - Versioning moves from whole numbers to semantic versioning; this release is **1.4.0**.
-- When Mako is installed under Program Files (`C:\Program Files\ShinraCC\Apps\Mako`, managed by the launcher), its data Ã¢â‚¬â€ settings, the encrypted Mako-Mem vault, downloaded models and logs Ã¢â‚¬â€ lives in `%LocalAppData%\ShinraCC\Mako`. Run it portably and it still keeps everything in a `Mako-Data` folder beside the exe, exactly as before; an existing portable kit is migrated automatically on first run, and the DPAPI vault keeps decrypting for the same Windows user.
+- When Mako is installed under Program Files (`C:\Program Files\ShinraCC\Apps\Mako`, managed by the launcher), its data ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â settings, the encrypted Mako-Mem vault, downloaded models and logs ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â lives in `%LocalAppData%\ShinraCC\Mako`. Run it portably and it still keeps everything in a `Mako-Data` folder beside the exe, exactly as before; an existing portable kit is migrated automatically on first run, and the DPAPI vault keeps decrypting for the same Windows user.
 - When the launcher manages Mako, updates are delivered by the launcher (no in-place self-update under Program Files).
 
 Signed with the Shinra CC certificate.
