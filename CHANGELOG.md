@@ -1,5 +1,15 @@
 # Mako changelog
 
+## Mako 1.4.4: download retries and GPU-runtime detection fix
+<!-- mako v1.4.4 -->
+
+Bug fixes.
+
+- Downloads now retry on rate limits. Installing the knowledge-pack server (kiwix-serve) and other Library components could fail with "429 Too Many Requests" from the host; downloads now send a proper agent and retry with backoff, so a passing rate limit no longer stops the install.
+- The Settings page no longer shows the GPU runtime as "missing" after you have downloaded it. The GPU build status and the Hardware Acceleration option now update as soon as the download finishes.
+
+Signed with the Shinra CC certificate.
+
 ## Mako 1.4.3: reliable updates, honest model loading, and new models
 <!-- mako v1.4.3 -->
 
@@ -23,7 +33,7 @@ Mako 1.4.2: updates now close and reopen Mako cleanly
 Mako now installs and updates through the ShinraSuite launcher.
 
 - Versioning moves from whole numbers to semantic versioning; this release is **1.4.0**.
-- When Mako is installed under Program Files (`C:\Program Files\ShinraCC\Apps\Mako`, managed by the launcher), its data ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â settings, the encrypted Mako-Mem vault, downloaded models and logs ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â lives in `%LocalAppData%\ShinraCC\Mako`. Run it portably and it still keeps everything in a `Mako-Data` folder beside the exe, exactly as before; an existing portable kit is migrated automatically on first run, and the DPAPI vault keeps decrypting for the same Windows user.
+- When Mako is installed under Program Files (`C:\Program Files\ShinraCC\Apps\Mako`, managed by the launcher), its data ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â settings, the encrypted Mako-Mem vault, downloaded models and logs ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â lives in `%LocalAppData%\ShinraCC\Mako`. Run it portably and it still keeps everything in a `Mako-Data` folder beside the exe, exactly as before; an existing portable kit is migrated automatically on first run, and the DPAPI vault keeps decrypting for the same Windows user.
 - When the launcher manages Mako, updates are delivered by the launcher (no in-place self-update under Program Files).
 
 Signed with the Shinra CC certificate.
