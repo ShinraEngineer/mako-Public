@@ -1,17 +1,38 @@
 # Mako changelog
 
+## Mako 2.0.1: scrollable image page, GPU-build prompt, resumable downloads, clearer settings
+<!-- mako v2.0.1 -->
+
+Mako 2.0.1 â€” polish and fixes on top of 2.0.0.
+
+**Image generator**
+- The generation page now **scrolls** â€” the reference and "Fix faces/eyes" controls are no longer cut off the bottom.
+- **Quality** reads **Low / Medium / High**, autoâ€‘picked for your PC, and warns if you choose a tier heavier than it can comfortably handle.
+- The Quality and "Use the reference as" dropdowns show their proper names again (no more raw `{ â€¦ }` labels), and each reference mode â€” img2img, ControlNet, IPAdapter â€” explains itself on hover.
+
+**Settings**
+- **Hardware Acceleration** is no longer a dead checkbox: if the GPU build isn't installed, ticking it offers to download it (~351 MB) and then turns on.
+- **Context size** reads in plain terms â€” how many words the model remembers, shown as "X GB model + Y GB context".
+- **Tooltips** across Settings â€” including the Agentic CLI permission matrix â€” now explain what each control does and what changing it affects (after a short, deliberate hover).
+
+**Downloads**
+- Large downloads (knowledge packs, models, the GPU build) now **resume** after a dropped connection instead of restarting from zero â€” the fix for a download that could crawl for days without finishing.
+
+As always: private, offline, signed, and all in one folder.
+
+
 ## Mako 2.0.0: image generation - reference images, face/eye detailer, one-click ComfyUI
 <!-- mako v2.0.0 -->
 
-Mako 2.0.0 brings **image generation** to the suite â€” the Westil / Illustrious house pipeline, private and offline, in one portable folder.
+Mako 2.0.0 brings **image generation** to the suite Ã¢â‚¬â€ the Westil / Illustrious house pipeline, private and offline, in one portable folder.
 
 **New: Make images**
-- **Simple and Advanced modes** â€” pick a category and describe it, or take control of every setting.
-- **Sentence â†’ tags** â€” write a plain sentence and Mako turns it into the commaâ€‘separated prompt the model wants, and shows you exactly what it used.
-- **Reference images** â€” start from a picture: reâ€‘imagine it (img2img), keep its structure (ControlNet), or borrow its style and subject (IPAdapter).
-- **Fix faces/eyes** â€” a detailer pass finds each face and regenerates it at high resolution, so eyes come out detailed instead of flat ovals. On by default.
-- **Oneâ€‘click local setup** â€” no server of your own? Mako stands up a private, offline ComfyUI and installs the house models and the reference / detailer addâ€‘ons for you, each pinned and hashâ€‘verified.
-- **Your workflow, ready** â€” the house node graph opens on the canvas, not a blank one.
+- **Simple and Advanced modes** Ã¢â‚¬â€ pick a category and describe it, or take control of every setting.
+- **Sentence Ã¢â€ â€™ tags** Ã¢â‚¬â€ write a plain sentence and Mako turns it into the commaÃ¢â‚¬â€˜separated prompt the model wants, and shows you exactly what it used.
+- **Reference images** Ã¢â‚¬â€ start from a picture: reÃ¢â‚¬â€˜imagine it (img2img), keep its structure (ControlNet), or borrow its style and subject (IPAdapter).
+- **Fix faces/eyes** Ã¢â‚¬â€ a detailer pass finds each face and regenerates it at high resolution, so eyes come out detailed instead of flat ovals. On by default.
+- **OneÃ¢â‚¬â€˜click local setup** Ã¢â‚¬â€ no server of your own? Mako stands up a private, offline ComfyUI and installs the house models and the reference / detailer addÃ¢â‚¬â€˜ons for you, each pinned and hashÃ¢â‚¬â€˜verified.
+- **Your workflow, ready** Ã¢â‚¬â€ the house node graph opens on the canvas, not a blank one.
 
 As always: private, offline, signed, and all in one folder.
 
@@ -62,7 +83,7 @@ Mako 1.4.2: updates now close and reopen Mako cleanly
 Mako now installs and updates through the ShinraSuite launcher.
 
 - Versioning moves from whole numbers to semantic versioning; this release is **1.4.0**.
-- When Mako is installed under Program Files (`C:\Program Files\ShinraCC\Apps\Mako`, managed by the launcher), its data ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â settings, the encrypted Mako-Mem vault, downloaded models and logs ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â lives in `%LocalAppData%\ShinraCC\Mako`. Run it portably and it still keeps everything in a `Mako-Data` folder beside the exe, exactly as before; an existing portable kit is migrated automatically on first run, and the DPAPI vault keeps decrypting for the same Windows user.
+- When Mako is installed under Program Files (`C:\Program Files\ShinraCC\Apps\Mako`, managed by the launcher), its data ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â settings, the encrypted Mako-Mem vault, downloaded models and logs ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â lives in `%LocalAppData%\ShinraCC\Mako`. Run it portably and it still keeps everything in a `Mako-Data` folder beside the exe, exactly as before; an existing portable kit is migrated automatically on first run, and the DPAPI vault keeps decrypting for the same Windows user.
 - When the launcher manages Mako, updates are delivered by the launcher (no in-place self-update under Program Files).
 
 Signed with the Shinra CC certificate.
